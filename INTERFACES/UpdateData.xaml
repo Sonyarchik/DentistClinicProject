@@ -1,0 +1,109 @@
+﻿<Window x:Class="DentistClinicProject.INTERFACES.UpdateData"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DentistClinicProject.INTERFACES"
+        mc:Ignorable="d"
+        Title="Обновление данных пациента" Height="604" Width="320"
+        ResizeMode="NoResize">
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#FFE6B2B9"/>
+                <GradientStop Color="#FFE680A3" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Rectangle HorizontalAlignment="Left" Height="129" Margin="-23,477,0,0" VerticalAlignment="Top" Width="104" RenderTransformOrigin="0.5,0.5">
+            <Rectangle.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleX="-1"/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-10.153"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Rectangle.RenderTransform>
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="/RESOURCES/ЗУБ.png" Stretch="Fill"/>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Rectangle HorizontalAlignment="Left" Height="67" Margin="260,546,0,0" VerticalAlignment="Top" Width="58" RenderTransformOrigin="0.5,0.5">
+            <Rectangle.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleX="1"/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-10.153"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Rectangle.RenderTransform>
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="/RESOURCES/ЗУБ.png" Stretch="Fill"/>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Rectangle HorizontalAlignment="Left" Height="32" Margin="277,510,0,0" VerticalAlignment="Top" Width="28" RenderTransformOrigin="0.5,0.5">
+            <Rectangle.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleX="1"/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="18.493"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Rectangle.RenderTransform>
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="/RESOURCES/ЗУБ.png" Stretch="Fill"/>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Rectangle HorizontalAlignment="Center" Height="553" Margin="0,10,0,0" Fill="#FFF0F0F0" VerticalAlignment="Top" Width="300" RadiusX="15.547" RadiusY="15.547">
+            <Rectangle.Effect>
+                <DropShadowEffect BlurRadius="20" Color="#E680A3"/>
+            </Rectangle.Effect>
+        </Rectangle>
+        <Label Content="______________________________________________________________________________________________________________________________________________________________" HorizontalAlignment="Center" Margin="0,110,0,0" VerticalAlignment="Top" Foreground="#66979A" Width="264"/>
+        <ComboBox x:Name="COMBOBOXPatient" HorizontalAlignment="Center" Margin="0,75,0,0" VerticalAlignment="Top" Width="265" BorderBrush="{x:Null}" Foreground="#FF66979A" FontSize="22">
+            <ComboBox.Background>
+                <LinearGradientBrush EndPoint="0,1">
+                    <GradientStop Color="#FFFAFAFA"/>
+                    <GradientStop Color="#FFE8EBEB" Offset="1"/>
+                </LinearGradientBrush>
+            </ComboBox.Background>
+        </ComboBox>
+        <Label Content="Пациент" HorizontalAlignment="Center" Margin="0,31,0,0" VerticalAlignment="Top" Foreground="#FF66979A" FontFamily="Yu Gothic UI Semibold" FontSize="22" Width="100"/>
+        <ComboBox x:Name="COMBOBOXStatus" HorizontalAlignment="Center" Margin="0,171,0,0" VerticalAlignment="Top" Width="264" BorderBrush="{x:Null}" Foreground="#FF66979A" FontSize="22">
+            <ComboBox.Background>
+                <LinearGradientBrush EndPoint="0,1">
+                    <GradientStop Color="#FFFAFAFA"/>
+                    <GradientStop Color="#FFE8EBEB" Offset="1"/>
+                </LinearGradientBrush>
+            </ComboBox.Background>
+        </ComboBox>
+        <Label Content="Статус" HorizontalAlignment="Center" Margin="0,132,0,0" VerticalAlignment="Top" Foreground="#FF66979A" FontFamily="Yu Gothic UI Semibold" FontSize="22" Width="80"/>
+        <Label Content="______________________________________________________________________________________________________________________________________________________________" HorizontalAlignment="Center" Margin="0,206,0,0" VerticalAlignment="Top" Foreground="#66979A" Width="264"/>
+        <Button x:Name="ButtonUpdate" Content="ОБНОВИТЬ" HorizontalAlignment="Center" Margin="0,505,0,0" VerticalAlignment="Top" FontFamily="Yu Gothic UI Semibold" Foreground="#FFFAFAFA" Background="#FF66979A" BorderBrush="{x:Null}" Height="44" Width="152" IsCancel="True" FontSize="18" Click="ButtonUpdate_Click">
+            <Button.Template>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border Background="#FF66979A" CornerRadius="30">
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        <TextBox x:Name="TextBoxTreatment" HorizontalAlignment="Center" TextWrapping="Wrap"  VerticalAlignment="Center" Width="264" FontFamily="Yu Gothic UI Semilight" Foreground="#66979A" FontSize="22" BorderBrush="{x:Null}" TextAlignment="Center" SelectionBrush="{x:Null}" SelectionTextBrush="{x:Null}" Height="89">
+            <TextBox.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFFAFAFA"/>
+                    <GradientStop Color="#FFE8EBEB" Offset="1"/>
+                </LinearGradientBrush>
+            </TextBox.Background>
+        </TextBox>
+        <Label Content="______________________________________________________________________________________________________________________________________________________________" HorizontalAlignment="Center" Margin="0,344,0,0" VerticalAlignment="Top" Foreground="#66979A" Width="264"/>
+        <ComboBox x:Name="COMBOBOXDiagnoses" HorizontalAlignment="Center" Margin="0,405,0,0" VerticalAlignment="Top" Width="264" BorderBrush="{x:Null}" Foreground="#FF66979A" FontSize="22">
+            <ComboBox.Background>
+                <LinearGradientBrush EndPoint="0,1">
+                    <GradientStop Color="#FFFAFAFA"/>
+                    <GradientStop Color="#FFE8EBEB" Offset="1"/>
+                </LinearGradientBrush>
+            </ComboBox.Background>
+        </ComboBox>
+        <Label Content="Диагноз" HorizontalAlignment="Center" Margin="0,366,0,0" VerticalAlignment="Top" Foreground="#FF66979A" FontFamily="Yu Gothic UI Semibold" FontSize="22" Width="100"/>
+    </Grid>
+</Window>

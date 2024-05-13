@@ -1,0 +1,666 @@
+﻿<Window x:Class="DentistClinicProject.INTERFACES.MedicineRegistrator"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DentistClinicProject.INTERFACES"
+        mc:Ignorable="d"
+        Title="Панель учета пациентов и услуг" Height="730" Width="1317"
+        ResizeMode="NoResize"
+        Loaded="Window_Loaded">
+    <Grid>
+
+        <TabControl>
+            <TabItem x:Name="TabMakerAppointment" Header="Запись к врачу" Foreground="#66979A" FontFamily="Yu Gothic UI Semibold" BorderBrush="#FFAFE7F0" Height="20" VerticalAlignment="Bottom">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="10*"/>
+                        <ColumnDefinition Width="59*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.Background>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            <GradientStop Color="#FFE6B2B9"/>
+                            <GradientStop Color="#FFE680A3" Offset="1"/>
+                        </LinearGradientBrush>
+                    </Grid.Background>
+                    <Rectangle HorizontalAlignment="Left" Height="71" Margin="996,104,0,0" VerticalAlignment="Top" Width="72" RenderTransformOrigin="0.5,0.5" Grid.Column="1">
+                        <Rectangle.RenderTransform>
+                            <TransformGroup>
+                                <ScaleTransform/>
+                                <SkewTransform/>
+                                <RotateTransform Angle="13.119"/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </Rectangle.RenderTransform>
+                        <Rectangle.Fill>
+                            <ImageBrush ImageSource="/RESOURCES/ЗУБ.png" Stretch="Uniform"/>
+                        </Rectangle.Fill>
+                    </Rectangle>
+                    <Rectangle HorizontalAlignment="Left" Height="100" Margin="-21,11,0,0" VerticalAlignment="Top" Width="149" RenderTransformOrigin="0.5,0.5">
+                        <Rectangle.RenderTransform>
+                            <TransformGroup>
+                                <ScaleTransform ScaleX="-1"/>
+                                <SkewTransform/>
+                                <RotateTransform Angle="13.119"/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </Rectangle.RenderTransform>
+                        <Rectangle.Fill>
+                            <ImageBrush ImageSource="/RESOURCES/ЗУБ.png" Stretch="Uniform"/>
+                        </Rectangle.Fill>
+                    </Rectangle>
+                    <Rectangle HorizontalAlignment="Left" Height="52" Margin="103,13,0,0" VerticalAlignment="Top" Width="76" RenderTransformOrigin="0.5,0.5">
+                        <Rectangle.RenderTransform>
+                            <TransformGroup>
+                                <ScaleTransform ScaleX="-1"/>
+                                <SkewTransform/>
+                                <RotateTransform Angle="-22.767"/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </Rectangle.RenderTransform>
+                        <Rectangle.Fill>
+                            <ImageBrush ImageSource="/RESOURCES/ЗУБ.png" Stretch="Uniform"/>
+                        </Rectangle.Fill>
+                    </Rectangle>
+                    <Rectangle HorizontalAlignment="Left" Height="52" Margin="937,158,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="0.5,0.5" Grid.Column="1">
+                        <Rectangle.RenderTransform>
+                            <TransformGroup>
+                                <ScaleTransform ScaleX="1"/>
+                                <SkewTransform/>
+                                <RotateTransform Angle="-22.767"/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </Rectangle.RenderTransform>
+                        <Rectangle.Fill>
+                            <ImageBrush ImageSource="/RESOURCES/ЗУБ.png" Stretch="Uniform"/>
+                        </Rectangle.Fill>
+                    </Rectangle>
+                    <Rectangle HorizontalAlignment="Left" Height="541" Margin="55,64,0,0" VerticalAlignment="Top" Width="487" Fill="#FFFAFAFA" RadiusX="24.04" RadiusY="24.04" Grid.ColumnSpan="2">
+                        <Rectangle.Effect>
+                            <DropShadowEffect BlurRadius="20" Color="#E680A3"/>
+                        </Rectangle.Effect>
+                    </Rectangle>
+                    <Rectangle HorizontalAlignment="Left" Height="172" Margin="388,64,0,0" VerticalAlignment="Top" Width="442" Fill="#FFFAFAFA" RadiusX="24.04" RadiusY="24.04" Grid.Column="1">
+                        <Rectangle.Effect>
+                            <DropShadowEffect BlurRadius="20" Color="#E680A3"/>
+                        </Rectangle.Effect>
+                    </Rectangle>
+                    <Rectangle HorizontalAlignment="Left" Height="155" Margin="388,0,0,0" VerticalAlignment="Center" Width="442" Fill="#FFFAFAFA" RadiusX="24.04" RadiusY="24.04" Grid.Column="1">
+                        <Rectangle.Effect>
+                            <DropShadowEffect BlurRadius="20" Color="#E680A3"/>
+                        </Rectangle.Effect>
+                    </Rectangle>
+                    <Rectangle HorizontalAlignment="Left" Height="155" Margin="388,450,0,0" VerticalAlignment="Top" Width="442" Fill="#FFFAFAFA" RadiusX="24.04" RadiusY="24.04" Grid.Column="1">
+                        <Rectangle.Effect>
+                            <DropShadowEffect BlurRadius="20" Color="#E680A3"/>
+                        </Rectangle.Effect>
+                    </Rectangle>
+                    <Rectangle HorizontalAlignment="Left" Height="382" Margin="856,64,0,0" VerticalAlignment="Top" Width="205" Fill="#FFFAFAFA" RadiusX="24.04" RadiusY="24.04" Grid.Column="1">
+                        <Rectangle.Effect>
+                            <DropShadowEffect BlurRadius="20" Color="#E680A3"/>
+                        </Rectangle.Effect>
+                    </Rectangle>
+                    <Label Content="______________________________________________________________________________________________________________________________________________________________" HorizontalAlignment="Left" Margin="117,158,0,0" VerticalAlignment="Top" Foreground="#66979A" Width="363" Grid.ColumnSpan="2"/>
+                    <ComboBox x:Name="COMBOBOXPatient" HorizontalAlignment="Left" Margin="117,132,0,0" VerticalAlignment="Top" Width="363" BorderBrush="{x:Null}" Foreground="#FF66979A" FontSize="22" Grid.ColumnSpan="2">
+                        <ComboBox.Background>
+                            <LinearGradientBrush EndPoint="0,1">
+                                <GradientStop Color="#FFFAFAFA"/>
+                                <GradientStop Color="#FFE8EBEB" Offset="1"/>
+                            </LinearGradientBrush>
+                        </ComboBox.Background>
+                    </ComboBox>
+                    <Label Content="______________________________________________________________________________________________________________________________________________________________" HorizontalAlignment="Left" Margin="117,258,0,0" VerticalAlignment="Top" Foreground="#66979A" Width="363" Grid.ColumnSpan="2"/>
+                    <ComboBox x:Name="COMBOBOXDoctor" HorizontalAlignment="Left" Margin="117,232,0,0" VerticalAlignment="Top" Width="363" BorderBrush="{x:Null}" Foreground="#FF66979A" FontSize="22" Grid.ColumnSpan="2">
+                        <ComboBox.Background>
+                            <LinearGradientBrush EndPoint="0,1">
+                                <GradientStop Color="#FFFAFAFA"/>
+                                <GradientStop Color="#FFE8EBEB" Offset="1"/>
+                            </LinearGradientBrush>
+                        </ComboBox.Background>
+                    </ComboBox>
+                    <Label Content="Пациент" HorizontalAlignment="Left" Margin="59,88,0,0" VerticalAlignment="Top" Foreground="#FF66979A" FontFamily="Yu Gothic UI Semibold" FontSize="22" Grid.Column="1"/>
+                    <Label Content="Врач" HorizontalAlignment="Left" Margin="78,193,0,0" VerticalAlignment="Top" Foreground="#FF66979A" FontFamily="Yu Gothic UI Semibold" FontSize="22" Grid.Column="1"/>
+                    <Label Content="Дата записи" HorizontalAlignment="Left" Margin="117,314,0,0" VerticalAlignment="Top" Foreground="#FF66979A" FontFamily="Yu Gothic UI Semibold" FontSize="22" Grid.ColumnSpan="2"/>
+                    <Label Content="Время записи" HorizontalAlignment="Left" Margin="141,314,0,0" VerticalAlignment="Top" Foreground="#FF66979A" FontFamily="Yu Gothic UI Semibold" FontSize="22" Grid.Column="1"/>
+                    <Label Content="__________________________________________________" HorizontalAlignment="Left" Margin="117,343,0,0" VerticalAlignment="Top" Foreground="#66979A" Width="144" Grid.ColumnSpan="2"/>
+                    <Label Content="__________________________________________________" HorizontalAlignment="Left" Margin="146,343,0,0" VerticalAlignment="Top" Foreground="#66979A" Width="144" Grid.Column="1"/>
+                    <Calendar x:Name="Calendar" HorizontalAlignment="Left" Margin="96,388,0,0" VerticalAlignment="Top" BorderBrush="{x:Null}" Foreground="#FF66979A" FontSize="18" Grid.ColumnSpan="2">
+                        <Calendar.Background>
+                            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                <GradientStop Color="#FFEED1D8"/>
+                                <GradientStop Color="#FFFAFAFA" Offset="1"/>
+                            </LinearGradientBrush>
+                        </Calendar.Background>
+                    </Calendar>
+                    <Label Content="__________________________________________________" HorizontalAlignment="Left" Margin="183,420,0,0" VerticalAlignment="Top" Foreground="#66979A" Width="70" Grid.Column="1"/>
+                    <Label Content="__________________________________________________" HorizontalAlignment="Left" Margin="185,470,0,0" VerticalAlignment="Top" Foreground="#66979A" Width="70" Grid.Column="1"/>
+                    <Label Content="ЧЧ" HorizontalAlignment="Left" Margin="288,402,0,0" VerticalAlignment="Top" Foreground="#FF66979A" FontFamily="Yu Gothic UI Semibold" FontSize="16" Grid.Column="1"/>
+                    <Label Content="ММ" HorizontalAlignment="Left" Margin="288,448,0,0" VerticalAlignment="Top" Foreground="#FF66979A" FontFamily="Yu Gothic UI Semibold" FontSize="16" Grid.Column="1"/>
+                    <Label Content="СС" HorizontalAlignment="Left" Margin="290,496,0,0" VerticalAlignment="Top" Foreground="#FF66979A" FontFamily="Yu Gothic UI Semibold" FontSize="16" Grid.Column="1"/>
+                    <Label Content="______________________________________________________________________________________________________________________________________________________________" HorizontalAlignment="Left" Margin="428,158,0,0" VerticalAlignment="Top" Foreground="#66979A" Width="363" Grid.Column="1"/>
+                    <ComboBox x:Name="COMBOBOXServicesList" HorizontalAlignment="Left" Margin="428,132,0,0" VerticalAlignment="Top" Width="363" BorderBrush="{x:Null}" Foreground="#FF66979A" FontSize="22" Grid.Column="1">
+                        <ComboBox.Background>
+                            <LinearGradientBrush EndPoint="0,1">
+                                <GradientStop Color="#FFFAFAFA"/>
+                                <GradientStop Color="#FFE8EBEB" Offset="1"/>
+                            </LinearGradientBrush>
+                        </ComboBox.Background>
+                    </ComboBox>
+                    <Label Content="Услуга" HorizontalAlignment="Left" Margin="571,88,0,0" VerticalAlignment="Top" Foreground="#FF66979A" FontFamily="Yu Gothic UI Semibold" FontSize="22" Grid.Column="1"/>
+                    <Label Content="Диагноз" HorizontalAlignment="Left" Margin="561,277,0,0" VerticalAlignment="Top" Foreground="#FF66979A" FontFamily="Yu Gothic UI Semibold" FontSize="22" Grid.Column="1"/>
+                    <Label Content="Сотрудник!" HorizontalAlignment="Left" Margin="556,307,0,0" VerticalAlignment="Top" Foreground="#FFE67680" FontFamily="Yu Gothic UI Semibold" FontSize="18" Grid.Column="1"/>
+                    <Label Content="Помни, что диагноз выставляется только врачом!" HorizontalAlignment="Left" Margin="415,331,0,0" VerticalAlignment="Top" Foreground="#FF66979A" FontFamily="Yu Gothic UI Semibold" FontSize="16" Grid.Column="1"/>
+                    <Label Content="Самолечение пациентов противопоказано!" HorizontalAlignment="Left" Margin="438,349,0,0" VerticalAlignment="Top" Foreground="#FF66979A" FontFamily="Yu Gothic UI Semibold" FontSize="16" Grid.Column="1"/>
+                    <Label Content="Автоматически выставляется как" HorizontalAlignment="Left" Margin="478,367,0,0" VerticalAlignment="Top" Foreground="#FF66979A" FontFamily="Yu Gothic UI Semibold" FontSize="16" Grid.Column="1"/>
+                    <Label Content="'медицинский осмотр'" HorizontalAlignment="Left" Margin="518,383,0,0" VerticalAlignment="Top" Foreground="#FFE67680" FontFamily="Yu Gothic UI Semibold" FontSize="16" Grid.Column="1"/>
+                    <Label Content="______________________________________________________________________________________________________________________________________________________________" HorizontalAlignment="Left" Margin="428,570,0,0" VerticalAlignment="Top" Foreground="#66979A" Width="363" Grid.Column="1"/>
+                    <Label Content="Рекомендации" HorizontalAlignment="Left" Margin="527,462,0,0" VerticalAlignment="Top" Foreground="#FF66979A" FontFamily="Yu Gothic UI Semibold" FontSize="22" Grid.Column="1"/>
+                    <Label Content="______________________________________________________________________________________________________________________________________________________________" HorizontalAlignment="Left" Margin="886,229,0,0" VerticalAlignment="Top" Foreground="#66979A" Width="145" Grid.Column="1"/>
+                    <ComboBox x:Name="COMBOBOXStatus" HorizontalAlignment="Left" Margin="886,143,0,0" VerticalAlignment="Top" Width="145" BorderBrush="{x:Null}" Foreground="#FF66979A" FontSize="22" Grid.Column="1">
+                        <ComboBox.Background>
+                            <LinearGradientBrush EndPoint="0,1">
+                                <GradientStop Color="#FFFAFAFA"/>
+                                <GradientStop Color="#FFE8EBEB" Offset="1"/>
+                            </LinearGradientBrush>
+                        </ComboBox.Background>
+                    </ComboBox>
+                    <Label Content="Статус" HorizontalAlignment="Left" Margin="918,99,0,0" VerticalAlignment="Top" Foreground="#FF66979A" FontFamily="Yu Gothic UI Semibold" FontSize="22" Width="80" Grid.Column="1"/>
+                    <Button x:Name="BUTTONAdd" Content="ЗАПИСАТЬ" HorizontalAlignment="Left" Margin="866,368,0,0" VerticalAlignment="Top" FontFamily="Yu Gothic UI Semibold" Foreground="#FFFAFAFA" Background="#FF66979A" BorderBrush="{x:Null}" Height="53" Width="184" IsCancel="True" FontSize="18" Click="BUTTONAdd_Click" Grid.Column="1">
+                        <Button.Template>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Border Background="#FF66979A" CornerRadius="30">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Button.Template>
+                    </Button>
+                    <TextBox x:Name="TextBoxHour" Text="08" HorizontalAlignment="Left" Margin="145,402,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="146" FontFamily="Yu Gothic UI Semilight" Foreground="#66979A" FontSize="22" BorderBrush="{x:Null}" TextAlignment="Center" SelectionBrush="{x:Null}" SelectionTextBrush="{x:Null}" Grid.Column="1">
+                        <TextBox.Background>
+                            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                <GradientStop Color="#FFFAFAFA"/>
+                                <GradientStop Color="#FFE8EBEB" Offset="1"/>
+                            </LinearGradientBrush>
+                        </TextBox.Background>
+                    </TextBox>
+                    <TextBox x:Name="TextBoxMinute" Text="30" HorizontalAlignment="Left" Margin="145,448,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="146" FontFamily="Yu Gothic UI Semilight" Foreground="#66979A" FontSize="22" BorderBrush="{x:Null}" TextAlignment="Center" SelectionBrush="{x:Null}" SelectionTextBrush="{x:Null}" Grid.Column="1">
+                        <TextBox.Background>
+                            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                <GradientStop Color="#FFFAFAFA"/>
+                                <GradientStop Color="#FFE8EBEB" Offset="1"/>
+                            </LinearGradientBrush>
+                        </TextBox.Background>
+                    </TextBox>
+                    <TextBox x:Name="TextBoxSecond" Text="00" HorizontalAlignment="Left" Margin="146,496,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="146" FontFamily="Yu Gothic UI Semilight" Foreground="#66979A" FontSize="22" BorderBrush="{x:Null}" TextAlignment="Center" SelectionBrush="{x:Null}" SelectionTextBrush="{x:Null}" Grid.Column="1">
+                        <TextBox.Background>
+                            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                <GradientStop Color="#FFFAFAFA"/>
+                                <GradientStop Color="#FFE8EBEB" Offset="1"/>
+                            </LinearGradientBrush>
+                        </TextBox.Background>
+                    </TextBox>
+                    <TextBox x:Name="TextBoxTreatment" HorizontalAlignment="Left" Margin="427,506,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="362" FontFamily="Yu Gothic UI Semilight" Foreground="#66979A" FontSize="22" BorderBrush="{x:Null}" TextAlignment="Center" SelectionBrush="{x:Null}" SelectionTextBrush="{x:Null}" Height="67" Grid.Column="1">
+                        <TextBox.Background>
+                            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                <GradientStop Color="#FFFAFAFA"/>
+                                <GradientStop Color="#FFE8EBEB" Offset="1"/>
+                            </LinearGradientBrush>
+                        </TextBox.Background>
+                    </TextBox>
+                    <Rectangle HorizontalAlignment="Left" Height="191" Margin="817,491,0,0" VerticalAlignment="Top" Width="255" RenderTransformOrigin="0.5,0.5" Grid.Column="1">
+                        <Rectangle.RenderTransform>
+                            <TransformGroup>
+                                <ScaleTransform ScaleX="-1.005" ScaleY="0.995"/>
+                                <SkewTransform AngleY="2.7"/>
+                                <RotateTransform Angle="11.833"/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </Rectangle.RenderTransform>
+                        <Rectangle.Fill>
+                            <ImageBrush ImageSource="/RESOURCES/ЗУБ.png" Stretch="Uniform"/>
+                        </Rectangle.Fill>
+                    </Rectangle>
+                    <Rectangle HorizontalAlignment="Left" Height="99" Margin="1000,473,0,0" VerticalAlignment="Top" Width="164" RenderTransformOrigin="0.5,0.5" Grid.Column="1">
+                        <Rectangle.RenderTransform>
+                            <TransformGroup>
+                                <ScaleTransform ScaleX="-1.015" ScaleY="0.986"/>
+                                <SkewTransform AngleY="-4.354"/>
+                                <RotateTransform Angle="-20.671"/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </Rectangle.RenderTransform>
+                        <Rectangle.Fill>
+                            <ImageBrush ImageSource="/RESOURCES/ЗУБ.png" Stretch="Uniform"/>
+                        </Rectangle.Fill>
+                    </Rectangle>
+                    <Rectangle HorizontalAlignment="Left" Height="59" Margin="1019,601,0,0" VerticalAlignment="Top" Width="101" RenderTransformOrigin="0.5,0.5" Grid.Column="1">
+                        <Rectangle.RenderTransform>
+                            <TransformGroup>
+                                <ScaleTransform ScaleX="-1.015" ScaleY="0.986"/>
+                                <SkewTransform AngleY="-4.354"/>
+                                <RotateTransform Angle="-20.671"/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </Rectangle.RenderTransform>
+                        <Rectangle.Fill>
+                            <ImageBrush ImageSource="/RESOURCES/ЗУБ.png" Stretch="Uniform"/>
+                        </Rectangle.Fill>
+                    </Rectangle>
+
+                </Grid>
+            </TabItem>
+            <TabItem x:Name="TabItemMedicalBook" Header="История посещений" Foreground="#66979A" FontFamily="Yu Gothic UI Semibold" BorderBrush="#FFAFE7F0">
+                <Grid>
+                    <Grid.Background>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            <GradientStop Color="#FFE6B2B9"/>
+                            <GradientStop Color="#FFE680A3" Offset="1"/>
+                        </LinearGradientBrush>
+                    </Grid.Background>
+                    <Rectangle HorizontalAlignment="Left" Height="71" Margin="1220,564,0,0" VerticalAlignment="Top" Width="72" RenderTransformOrigin="0.5,0.5">
+                        <Rectangle.RenderTransform>
+                            <TransformGroup>
+                                <ScaleTransform/>
+                                <SkewTransform/>
+                                <RotateTransform Angle="13.119"/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </Rectangle.RenderTransform>
+                        <Rectangle.Fill>
+                            <ImageBrush ImageSource="/RESOURCES/ЗУБ.png" Stretch="Uniform"/>
+                        </Rectangle.Fill>
+                    </Rectangle>
+                    <Rectangle HorizontalAlignment="Left" Height="129" Margin="1059,571,0,0" VerticalAlignment="Top" Width="104" RenderTransformOrigin="0.5,0.5">
+                        <Rectangle.RenderTransform>
+                            <TransformGroup>
+                                <ScaleTransform ScaleX="-1"/>
+                                <SkewTransform/>
+                                <RotateTransform Angle="-10.153"/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </Rectangle.RenderTransform>
+                        <Rectangle.Fill>
+                            <ImageBrush ImageSource="/RESOURCES/ЗУБ.png" Stretch="Fill"/>
+                        </Rectangle.Fill>
+                    </Rectangle>
+                    <Rectangle HorizontalAlignment="Left" Height="576" Margin="1052,7,0,0" Fill="#FFF0F0F0" VerticalAlignment="Top" Width="230" RadiusX="15.547" RadiusY="15.547">
+                        <Rectangle.Effect>
+                            <DropShadowEffect BlurRadius="20" Color="#E680A3"/>
+                        </Rectangle.Effect>
+                    </Rectangle>
+                    <DataGrid x:Name="MedicineBookGrid" Foreground="#66979A" Margin="0,0,253,0" BorderBrush="#FF8DBFCF">
+                        <DataGrid.Background>
+                            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                <GradientStop Color="#FFDDDDDD" Offset="1"/>
+                                <GradientStop Color="#FFE6E6E6" Offset="0.455"/>
+                            </LinearGradientBrush>
+                        </DataGrid.Background>
+                    </DataGrid>
+                    <Button x:Name="BUTTONSearch" Content="ПОИСК" HorizontalAlignment="Left" Margin="1075,204,0,0" VerticalAlignment="Top" FontFamily="Yu Gothic UI Semibold" Foreground="#FFFAFAFA" Background="#FF66979A" BorderBrush="{x:Null}" Height="53" Width="184" IsCancel="True" FontSize="18" Click="BUTTONSearch_Click">
+                        <Button.Template>
+                            <ControlTemplate TargetType="Button">
+                                <Border Background="#FF66979A" CornerRadius="30">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Button.Template>
+                    </Button>
+                    <Label x:Name="LABELTotalSumm" Content="Label" HorizontalAlignment="Left" Margin="1075,382,0,0" VerticalAlignment="Top" Background="{x:Null}" Foreground="#FF66979A" FontFamily="Yu Gothic UI Semibold" FontSize="18" />
+                    <TextBox x:Name="TEXTBOXSearch" HorizontalAlignment="Left" TextAlignment="Center" Margin="1067,38,0,0" TextWrapping="Wrap" Text="Введите искомое" VerticalAlignment="Top" Width="200" Foreground="#FF66979A" FontFamily="Yu Gothic UI Semibold" FontSize="22" Height="41" SelectionBrush="{x:Null}" SelectionTextBrush="{x:Null}" BorderBrush="{x:Null}">
+                        <TextBox.Background>
+                            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                <GradientStop Color="#FFF0F0F0"/>
+                                <GradientStop Color="#FFE8EBEB" Offset="1"/>
+                            </LinearGradientBrush>
+                        </TextBox.Background>
+                    </TextBox>
+                    <RadioButton x:Name="RadioButtonSearchPatient" Content="По имени пациента" HorizontalAlignment="Left" Margin="1063,84,0,0" VerticalAlignment="Top" BorderBrush="{x:Null}" Background="{x:Null}" Foreground="#FF66979A" FontFamily="Yu Gothic UI Semibold" FontSize="18"/>
+                    <RadioButton x:Name="RadioButtonSearchDoctor" Content="По имени врача" HorizontalAlignment="Left" Margin="1063,112,0,0" VerticalAlignment="Top" BorderBrush="{x:Null}" Background="{x:Null}" Foreground="#FF66979A" FontFamily="Yu Gothic UI Semibold" FontSize="18"/>
+                    <RadioButton x:Name="RadioButtonSearchDiagnosis" Content="По диагнозу" HorizontalAlignment="Left" Margin="1063,140,0,0" VerticalAlignment="Top" BorderBrush="{x:Null}" Background="{x:Null}" Foreground="#FF66979A" FontFamily="Yu Gothic UI Semibold" FontSize="18"/>
+                    <RadioButton x:Name="RadioButtonSearchService" Content="По услуге" HorizontalAlignment="Left" Margin="1063,168,0,0" VerticalAlignment="Top" BorderBrush="{x:Null}" Background="{x:Null}" Foreground="#FF66979A" FontFamily="Yu Gothic UI Semibold" FontSize="18"/>
+                    <Rectangle HorizontalAlignment="Left" Height="38" Margin="1182,632,0,0" VerticalAlignment="Top" Width="38" RenderTransformOrigin="0.5,0.5">
+                        <Rectangle.Effect>
+                            <BlurEffect/>
+                        </Rectangle.Effect>
+                        <Rectangle.RenderTransform>
+                            <TransformGroup>
+                                <ScaleTransform/>
+                                <SkewTransform/>
+                                <RotateTransform Angle="13.119"/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </Rectangle.RenderTransform>
+                        <Rectangle.Fill>
+                            <ImageBrush ImageSource="/RESOURCES/ЗУБ.png" Stretch="Uniform"/>
+                        </Rectangle.Fill>
+                    </Rectangle>
+                    <Button x:Name="BUTTONRefresh" Content="ОБНОВИТЬ" HorizontalAlignment="Left" Margin="1075,497,0,0" VerticalAlignment="Top" FontFamily="Yu Gothic UI Semibold" Foreground="#FFFAFAFA" Background="#FF66979A" BorderBrush="{x:Null}" Height="53" Width="184" IsCancel="True" FontSize="18" Click="BUTTONRefresh_Click">
+                        <Button.Template>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Border Background="#FF66979A" CornerRadius="30">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Button.Template>
+                    </Button>
+                </Grid>
+            </TabItem>
+            <TabItem x:Name="TabItemPatients" Header="Пациенты" Foreground="#66979A" FontFamily="Yu Gothic UI Semibold" BorderBrush="#FFAFE7F0">
+                <Grid>
+                    <Grid.Background>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            <GradientStop Color="#FFE6B2B9"/>
+                            <GradientStop Color="#FFE680A3" Offset="1"/>
+                        </LinearGradientBrush>
+                    </Grid.Background>
+                    <Rectangle HorizontalAlignment="Left" Height="71" Margin="1220,564,0,0" VerticalAlignment="Top" Width="72" RenderTransformOrigin="0.5,0.5">
+                        <Rectangle.RenderTransform>
+                            <TransformGroup>
+                                <ScaleTransform/>
+                                <SkewTransform/>
+                                <RotateTransform Angle="13.119"/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </Rectangle.RenderTransform>
+                        <Rectangle.Fill>
+                            <ImageBrush ImageSource="/RESOURCES/ЗУБ.png" Stretch="Uniform"/>
+                        </Rectangle.Fill>
+                    </Rectangle>
+                    <Rectangle HorizontalAlignment="Left" Height="129" Margin="1059,571,0,0" VerticalAlignment="Top" Width="104" RenderTransformOrigin="0.5,0.5">
+                        <Rectangle.RenderTransform>
+                            <TransformGroup>
+                                <ScaleTransform ScaleX="-1"/>
+                                <SkewTransform/>
+                                <RotateTransform Angle="-10.153"/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </Rectangle.RenderTransform>
+                        <Rectangle.Fill>
+                            <ImageBrush ImageSource="/RESOURCES/ЗУБ.png" Stretch="Fill"/>
+                        </Rectangle.Fill>
+                    </Rectangle>
+                    <Rectangle HorizontalAlignment="Left" Height="576" Margin="1052,7,0,0" Fill="#FFF0F0F0" VerticalAlignment="Top" Width="230" RadiusX="15.547" RadiusY="15.547">
+                        <Rectangle.Effect>
+                            <DropShadowEffect BlurRadius="20" Color="#E680A3"/>
+                        </Rectangle.Effect>
+                    </Rectangle>
+                    <DataGrid x:Name="PatientsGrid" Foreground="#66979A" Margin="0,0,253,0" BorderBrush="#FF8DBFCF">
+                        <DataGrid.Background>
+                            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                <GradientStop Color="#FFDDDDDD" Offset="1"/>
+                                <GradientStop Color="#FFE6E6E6" Offset="0.455"/>
+                            </LinearGradientBrush>
+                        </DataGrid.Background>
+                    </DataGrid>
+                    <Button x:Name="BUTTONAddPatient" Content="ДОБАВИТЬ" HorizontalAlignment="Left" Margin="1075,512,0,0" VerticalAlignment="Top" FontFamily="Yu Gothic UI Semibold" Foreground="#FFFAFAFA" Background="#FF66979A" BorderBrush="{x:Null}" Height="53" Width="184" IsCancel="True" FontSize="18" Click="BUTTONAddPatient_Click">
+                        <Button.Template>
+                            <ControlTemplate TargetType="Button">
+                                <Border Background="#FF66979A" CornerRadius="30">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Button.Template>
+                    </Button>
+
+                    <Rectangle HorizontalAlignment="Left" Height="38" Margin="1182,632,0,0" VerticalAlignment="Top" Width="38" RenderTransformOrigin="0.5,0.5">
+                        <Rectangle.Effect>
+                            <BlurEffect/>
+                        </Rectangle.Effect>
+                        <Rectangle.RenderTransform>
+                            <TransformGroup>
+                                <ScaleTransform/>
+                                <SkewTransform/>
+                                <RotateTransform Angle="13.119"/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </Rectangle.RenderTransform>
+                        <Rectangle.Fill>
+                            <ImageBrush ImageSource="/RESOURCES/ЗУБ.png" Stretch="Uniform"/>
+                        </Rectangle.Fill>
+                    </Rectangle>
+                    <TextBox x:Name="TEXTBOXFirstName" TextWrapping="Wrap" Text="Фамилия" VerticalAlignment="Top" TextAlignment="Center" BorderBrush="{x:Null}" SelectionBrush="{x:Null}" SelectionTextBrush="{x:Null}" Foreground="#FF66979A" Margin="1075,31,52,0" FontSize="20">
+                        <TextBox.Background>
+                            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                <GradientStop Color="#FFE8EBEB" Offset="1"/>
+                                <GradientStop Color="#FFF0F0F0" Offset="0"/>
+                            </LinearGradientBrush>
+                        </TextBox.Background>
+                    </TextBox>
+                    <TextBox x:Name="TEXTBOXSecondName" TextWrapping="Wrap" Text="Имя" VerticalAlignment="Top" TextAlignment="Center" BorderBrush="{x:Null}" SelectionBrush="{x:Null}" SelectionTextBrush="{x:Null}" Foreground="#FF66979A" Margin="1075,65,52,0" FontSize="20">
+                        <TextBox.Background>
+                            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                <GradientStop Color="#FFE8EBEB" Offset="1"/>
+                                <GradientStop Color="#FFF0F0F0" Offset="0"/>
+                            </LinearGradientBrush>
+                        </TextBox.Background>
+                    </TextBox>
+                    <TextBox x:Name="TEXTBOXPatronymic" TextWrapping="Wrap" Text="Отчество" VerticalAlignment="Top" TextAlignment="Center" BorderBrush="{x:Null}" SelectionBrush="{x:Null}" SelectionTextBrush="{x:Null}" Foreground="#FF66979A" Margin="1075,99,52,0" FontSize="20">
+                        <TextBox.Background>
+                            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                <GradientStop Color="#FFE8EBEB" Offset="1"/>
+                                <GradientStop Color="#FFF0F0F0" Offset="0"/>
+                            </LinearGradientBrush>
+                        </TextBox.Background>
+                    </TextBox>
+                    <TextBox x:Name="TEXTBOXPhone" TextWrapping="Wrap" Text="Номер телефона" VerticalAlignment="Top" TextAlignment="Center" BorderBrush="{x:Null}" SelectionBrush="{x:Null}" SelectionTextBrush="{x:Null}" Foreground="#FF66979A" Margin="1075,156,52,0" FontSize="20">
+                        <TextBox.Background>
+                            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                <GradientStop Color="#FFE8EBEB" Offset="1"/>
+                                <GradientStop Color="#FFF0F0F0" Offset="0"/>
+                            </LinearGradientBrush>
+                        </TextBox.Background>
+                    </TextBox>
+                    <TextBox x:Name="TEXTBOXEmail" TextWrapping="Wrap" Text="Почта" VerticalAlignment="Top" TextAlignment="Center" BorderBrush="{x:Null}" SelectionBrush="{x:Null}" SelectionTextBrush="{x:Null}" Foreground="#FF66979A" Margin="1075,211,52,0" FontSize="18">
+                        <TextBox.Background>
+                            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                <GradientStop Color="#FFE8EBEB" Offset="1"/>
+                                <GradientStop Color="#FFF0F0F0" Offset="0"/>
+                            </LinearGradientBrush>
+                        </TextBox.Background>
+                    </TextBox>
+                    <TextBox x:Name="TEXTBOXPassportSeries" TextWrapping="Wrap" Text="Серия паспорта" VerticalAlignment="Top" TextAlignment="Center" BorderBrush="{x:Null}" SelectionBrush="{x:Null}" SelectionTextBrush="{x:Null}" Foreground="#FF66979A" Margin="1075,261,52,0" FontSize="20">
+                        <TextBox.Background>
+                            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                <GradientStop Color="#FFE8EBEB" Offset="1"/>
+                                <GradientStop Color="#FFF0F0F0" Offset="0"/>
+                            </LinearGradientBrush>
+                        </TextBox.Background>
+                    </TextBox>
+                    <TextBox x:Name="TEXTBOXPassportNumber" TextWrapping="Wrap" Text="Номер паспорта" VerticalAlignment="Top" TextAlignment="Center" BorderBrush="{x:Null}" SelectionBrush="{x:Null}" SelectionTextBrush="{x:Null}" Foreground="#FF66979A" Margin="1075,295,52,0" FontSize="20">
+                        <TextBox.Background>
+                            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                <GradientStop Color="#FFE8EBEB" Offset="1"/>
+                                <GradientStop Color="#FFF0F0F0" Offset="0"/>
+                            </LinearGradientBrush>
+                        </TextBox.Background>
+                    </TextBox>
+                    <TextBox x:Name="TEXTBOXSNILS" TextWrapping="Wrap" Text="СНИЛС" VerticalAlignment="Top" TextAlignment="Center" BorderBrush="{x:Null}" SelectionBrush="{x:Null}" SelectionTextBrush="{x:Null}" Foreground="#FF66979A" Margin="1075,354,52,0" FontSize="20">
+                        <TextBox.Background>
+                            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                <GradientStop Color="#FFE8EBEB" Offset="1"/>
+                                <GradientStop Color="#FFF0F0F0" Offset="0"/>
+                            </LinearGradientBrush>
+                        </TextBox.Background>
+                    </TextBox>
+                    <DatePicker x:Name="DatePickerBday" HorizontalAlignment="Left" Margin="1099,437,0,0" VerticalAlignment="Top" BorderBrush="{x:Null}" Foreground="#FF66979A" FontSize="18"/>
+                    <Label Content="Дата рождения" HorizontalAlignment="Left" Margin="1082,393,0,0" VerticalAlignment="Top" Foreground="#FF66979A" FontSize="22"/>
+                    <Label Content="______________________________________________________________________________________________________________________________________________________________" HorizontalAlignment="Left" Margin="1095,230,0,0" VerticalAlignment="Top" Foreground="#66979A" Width="145"/>
+                    <Label Content="______________________________________________________________________________________________________________________________________________________________" HorizontalAlignment="Left" Margin="1095,185,0,0" VerticalAlignment="Top" Foreground="#66979A" Width="145"/>
+                    <Label Content="______________________________________________________________________________________________________________________________________________________________" HorizontalAlignment="Left" Margin="1095,125,0,0" VerticalAlignment="Top" Foreground="#66979A" Width="145"/>
+                    <Label Content="______________________________________________________________________________________________________________________________________________________________" HorizontalAlignment="Left" Margin="1095,317,0,0" VerticalAlignment="Top" Foreground="#66979A" Width="145"/>
+                    <Label Content="______________________________________________________________________________________________________________________________________________________________" HorizontalAlignment="Left" Margin="1095,375,0,0" VerticalAlignment="Top" Foreground="#66979A" Width="145"/>
+                </Grid>
+            </TabItem>
+            <TabItem x:Name="TabItemDoctors" Header="Врачи" Foreground="#66979A" FontFamily="Yu Gothic UI Semibold" BorderBrush="#FFAFE7F0">
+                <Grid>
+                    <Grid.Background>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            <GradientStop Color="#FFE6B2B9"/>
+                            <GradientStop Color="#FFE680A3" Offset="1"/>
+                        </LinearGradientBrush>
+                    </Grid.Background>
+                    <Rectangle HorizontalAlignment="Left" Height="71" Margin="1220,564,0,0" VerticalAlignment="Top" Width="72" RenderTransformOrigin="0.5,0.5">
+                        <Rectangle.RenderTransform>
+                            <TransformGroup>
+                                <ScaleTransform/>
+                                <SkewTransform/>
+                                <RotateTransform Angle="13.119"/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </Rectangle.RenderTransform>
+                        <Rectangle.Fill>
+                            <ImageBrush ImageSource="/RESOURCES/ЗУБ.png" Stretch="Uniform"/>
+                        </Rectangle.Fill>
+                    </Rectangle>
+                    <Rectangle HorizontalAlignment="Left" Height="129" Margin="1059,571,0,0" VerticalAlignment="Top" Width="104" RenderTransformOrigin="0.5,0.5">
+                        <Rectangle.RenderTransform>
+                            <TransformGroup>
+                                <ScaleTransform ScaleX="-1"/>
+                                <SkewTransform/>
+                                <RotateTransform Angle="-10.153"/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </Rectangle.RenderTransform>
+                        <Rectangle.Fill>
+                            <ImageBrush ImageSource="/RESOURCES/ЗУБ.png" Stretch="Fill"/>
+                        </Rectangle.Fill>
+                    </Rectangle>
+                    <Rectangle HorizontalAlignment="Left" Height="576" Margin="1052,7,0,0" Fill="#FFF0F0F0" VerticalAlignment="Top" Width="230" RadiusX="15.547" RadiusY="15.547">
+                        <Rectangle.Effect>
+                            <DropShadowEffect BlurRadius="20" Color="#E680A3"/>
+                        </Rectangle.Effect>
+                    </Rectangle>
+                    <DataGrid x:Name="DoctorGrid" Foreground="#66979A" Margin="0,0,253,0" BorderBrush="#FF8DBFCF">
+                        <DataGrid.Background>
+                            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                <GradientStop Color="#FFDDDDDD" Offset="1"/>
+                                <GradientStop Color="#FFE6E6E6" Offset="0.455"/>
+                            </LinearGradientBrush>
+                        </DataGrid.Background>
+                    </DataGrid>
+                    <Button x:Name="WatchInfoDoctor" Content="ЗАПИСИ" HorizontalAlignment="Left" Margin="1075,512,0,0" VerticalAlignment="Top" FontFamily="Yu Gothic UI Semibold" Foreground="#FFFAFAFA" Background="#FF66979A" BorderBrush="{x:Null}" Height="53" Width="184" IsCancel="True" FontSize="18" Click="WatchInfoDoctor_Click">
+                        <Button.Template>
+                            <ControlTemplate TargetType="Button">
+                                <Border Background="#FF66979A" CornerRadius="30">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Button.Template>
+                    </Button>
+                    <Calendar x:Name="CalendarDoctors" HorizontalAlignment="Left" Margin="1078,66,0,0" VerticalAlignment="Top" BorderBrush="{x:Null}" Foreground="#FF66979A" FontSize="18">
+                        <Calendar.Background>
+                            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                <GradientStop Color="#FFEED1D8"/>
+                                <GradientStop Color="#FFFAFAFA" Offset="1"/>
+                            </LinearGradientBrush>
+                        </Calendar.Background>
+                    </Calendar>
+                    <Label Content="Дата" HorizontalAlignment="Left" Margin="1138,27,0,0" VerticalAlignment="Top" Foreground="#FF66979A" FontFamily="Yu Gothic UI Semibold" FontSize="22"/>
+                    <Label Content="______________________________________________________________________________________________________________________________________________________________" HorizontalAlignment="Left" Margin="1097,243,0,0" VerticalAlignment="Top" Foreground="#66979A" Width="145"/>
+                    <ComboBox x:Name="COMBOBOXDoctor1" HorizontalAlignment="Left" Margin="1086,310,0,0" VerticalAlignment="Top" Width="171" FontSize="20" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FF66979A"/>
+                    <Label Content="Врач" HorizontalAlignment="Left" Margin="1141,271,0,0" VerticalAlignment="Top" Foreground="#FF66979A" FontFamily="Yu Gothic UI Semibold" FontSize="22"/>
+                </Grid>
+            </TabItem>
+            <TabItem x:Name="TabItemServices" Header="Услуги" Foreground="#66979A" FontFamily="Yu Gothic UI Semibold" BorderBrush="#FFAFE7F0">
+                <Grid>
+                    <Grid.Background>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            <GradientStop Color="#FFE6B2B9"/>
+                            <GradientStop Color="#FFE680A3" Offset="1"/>
+                        </LinearGradientBrush>
+                    </Grid.Background>
+                    <Rectangle HorizontalAlignment="Left" Height="71" Margin="1220,564,0,0" VerticalAlignment="Top" Width="72" RenderTransformOrigin="0.5,0.5">
+                        <Rectangle.RenderTransform>
+                            <TransformGroup>
+                                <ScaleTransform/>
+                                <SkewTransform/>
+                                <RotateTransform Angle="13.119"/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </Rectangle.RenderTransform>
+                        <Rectangle.Fill>
+                            <ImageBrush ImageSource="/RESOURCES/ЗУБ.png" Stretch="Uniform"/>
+                        </Rectangle.Fill>
+                    </Rectangle>
+                    <Rectangle HorizontalAlignment="Left" Height="129" Margin="1059,571,0,0" VerticalAlignment="Top" Width="104" RenderTransformOrigin="0.5,0.5">
+                        <Rectangle.RenderTransform>
+                            <TransformGroup>
+                                <ScaleTransform ScaleX="-1"/>
+                                <SkewTransform/>
+                                <RotateTransform Angle="-10.153"/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </Rectangle.RenderTransform>
+                        <Rectangle.Fill>
+                            <ImageBrush ImageSource="/RESOURCES/ЗУБ.png" Stretch="Fill"/>
+                        </Rectangle.Fill>
+                    </Rectangle>
+                    <Rectangle HorizontalAlignment="Left" Height="576" Margin="1052,7,0,0" Fill="#FFF0F0F0" VerticalAlignment="Top" Width="230" RadiusX="15.547" RadiusY="15.547">
+                        <Rectangle.Effect>
+                            <DropShadowEffect BlurRadius="20" Color="#E680A3"/>
+                        </Rectangle.Effect>
+                    </Rectangle>
+                    <DataGrid x:Name="ServicesList" Foreground="#66979A" Margin="0,0,253,0" BorderBrush="#FF8DBFCF">
+                        <DataGrid.Background>
+                            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                <GradientStop Color="#FFDDDDDD" Offset="1"/>
+                                <GradientStop Color="#FFE6E6E6" Offset="0.455"/>
+                            </LinearGradientBrush>
+                        </DataGrid.Background>
+                    </DataGrid>
+                    <Button x:Name="ButtonSortServices" Content="ОТСОРТИРОВАТЬ" HorizontalAlignment="Left" Margin="1076,434,0,0" VerticalAlignment="Top" FontFamily="Yu Gothic UI Semibold" Foreground="#FFFAFAFA" Background="#FF66979A" BorderBrush="{x:Null}" Height="53" Width="184" IsCancel="True" FontSize="18" Click="ButtonSortServices_Click">
+                        <Button.Template>
+                            <ControlTemplate TargetType="Button">
+                                <Border Background="#FF66979A" CornerRadius="30">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Button.Template>
+                    </Button>
+                    <TextBox x:Name="TEXTBOXSearchService" HorizontalAlignment="Left" TextAlignment="Center" Margin="1068,24,0,0" TextWrapping="Wrap" Text="Введите искомое" VerticalAlignment="Top" Width="200" Foreground="#FF66979A" FontFamily="Yu Gothic UI Semibold" FontSize="22" Height="41" SelectionBrush="{x:Null}" SelectionTextBrush="{x:Null}" BorderBrush="{x:Null}">
+                        <TextBox.Background>
+                            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                <GradientStop Color="#FFF0F0F0"/>
+                                <GradientStop Color="#FFE8EBEB" Offset="1"/>
+                            </LinearGradientBrush>
+                        </TextBox.Background>
+                    </TextBox>
+                    <Button x:Name="SearchService" Content="ПОИСК" HorizontalAlignment="Left" Margin="1076,70,0,0" VerticalAlignment="Top" FontFamily="Yu Gothic UI Semibold" Foreground="#FFFAFAFA" Background="#FF66979A" BorderBrush="{x:Null}" Height="53" Width="184" IsCancel="True" FontSize="18" Click="SearchService_Click">
+                        <Button.Template>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Border Background="#FF66979A" CornerRadius="30">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Button.Template>
+                    </Button>
+                    <RadioButton x:Name="RadioButtonPrice" Content="По стоимости" HorizontalAlignment="Left" Margin="1068,341,0,0" VerticalAlignment="Top" BorderBrush="{x:Null}" Background="{x:Null}" Foreground="#FF66979A" FontFamily="Yu Gothic UI Semibold" FontSize="18"/>
+                    <RadioButton x:Name="RadioButtonAlphabet" Content="А - Я" HorizontalAlignment="Left" Margin="1068,369,0,0" VerticalAlignment="Top" BorderBrush="{x:Null}" Background="{x:Null}" Foreground="#FF66979A" FontFamily="Yu Gothic UI Semibold" FontSize="18"/>
+                    <RadioButton x:Name="RadioButtonAlphabetInvert" Content="Я - А" HorizontalAlignment="Left" Margin="1068,397,0,0" VerticalAlignment="Top" BorderBrush="{x:Null}" Background="{x:Null}" Foreground="#FF66979A" FontFamily="Yu Gothic UI Semibold" FontSize="18"/>
+                    <Label Content="______________________________________________________________________________________________________________________________________________________________" HorizontalAlignment="Left" Margin="1094,131,0,0" VerticalAlignment="Top" Foreground="#66979A" Width="145"/>
+                    <ComboBox x:Name="COMBOBOXCategory" HorizontalAlignment="Left" Margin="1083,196,0,0" VerticalAlignment="Top" Width="170" FontSize="20" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FF66979A"/>
+                    <Label Content="Отделение" HorizontalAlignment="Left" Margin="1107,157,0,0" VerticalAlignment="Top" Foreground="#FF66979A" FontFamily="Yu Gothic UI Semibold" FontSize="22"/>
+                    <Label Content="______________________________________________________________________________________________________________________________________________________________" HorizontalAlignment="Left" Margin="1094,305,0,0" VerticalAlignment="Top" Foreground="#66979A" Width="145"/>
+                    <Button x:Name="ButtonSortCategories" Content="ОТСОРТИРОВАТЬ" HorizontalAlignment="Left" Margin="1076,247,0,0" VerticalAlignment="Top" FontFamily="Yu Gothic UI Semibold" Foreground="#FFFAFAFA" Background="#FF66979A" BorderBrush="{x:Null}" Height="53" Width="184" IsCancel="True" FontSize="18" Click="ButtonSortCategories_Click">
+                        <Button.Template>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Border Background="#FF66979A" CornerRadius="30">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Button.Template>
+                    </Button>
+                    <Label Content="______________________________________________________________________________________________________________________________________________________________" HorizontalAlignment="Left" Margin="1094,483,0,0" VerticalAlignment="Top" Foreground="#66979A" Width="145"/>
+                    <Button x:Name="ButtonRefreshServices" Content="ОБНОВИТЬ" HorizontalAlignment="Left" Margin="1075,514,0,0" VerticalAlignment="Top" FontFamily="Yu Gothic UI Semibold" Foreground="#FFFAFAFA" Background="#FF66979A" BorderBrush="{x:Null}" Height="53" Width="184" IsCancel="True" FontSize="18" Click="ButtonRefreshServices_Click">
+                        <Button.Template>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Border Background="#FF66979A" CornerRadius="30">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Button.Template>
+                    </Button>
+                </Grid>
+            </TabItem>
+        </TabControl>
+    </Grid>
+</Window>
